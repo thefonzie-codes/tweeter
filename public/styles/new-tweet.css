@@ -1,4 +1,4 @@
-.container {
+main {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -22,7 +22,7 @@
   position: relative;
   max-width: 1080px;
   padding: 5px;
-  font-size: small;
+  font-size: medium;
   font-weight: 600;
   color: #545149;
   background-color: #f4f1ec;
@@ -34,11 +34,13 @@
   border-top: 0;
 }
 
-div {
+.tweet-submit {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   font-weight: 300;
   font-family: 'Bungee', sans-serif;
+  font-size: medium;
   padding: 5px;
 }
 
@@ -47,4 +49,5 @@ button {
   background-color: #4056A1;
   border: 0;
   color: #FFFFFF;
+  font-size: medium;
 }

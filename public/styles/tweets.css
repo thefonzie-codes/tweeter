@@ -1,0 +1,67 @@
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1080px;
+  border: 3px solid #545149;
+}
+
+h4 {
+  margin: .5em;
+}
+
+h5 {
+  margin: .5em;
+  color: #4056A1;
+  opacity: .5;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: medium;
+  justify-content: space-between;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100;
+  position: relative;
+  max-width: 1080px;
+  padding: 5px;
+  font-size: medium;
+  font-weight: 600;
+  color: #545149;
+  background-color: #f4f1ec;
+  border-bottom: 2px solid #545149;
+  height: 5vh;
+  max-height: 100px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: .05em;
+}
+
+footer {
+  display: flex;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: x-small;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.tweet-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+i {
+  margin: .5em;
+  color: #4056A1;
+}
