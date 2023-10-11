@@ -57,29 +57,16 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form>
+      <form id="new-tweet-form">
         <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text">What are you humming about?</textarea>
+        <textarea name="text" id="tweet-str">What are you humming about?</textarea>
         <div class="tweet-submit">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    <article>
-      <section class="tweet-header">
-        <h4>Newton</h4>
-        <h5>@Tag</h5>
-      </section>
-      <p>The quick brown fox DID jump over the lazy dog.</p>
-      <footer>
-        Time lapsed
-        <section class="tweet-buttons">
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </section>
-      </footer>
+    </footer>
     </article>
   </main>
 </body>

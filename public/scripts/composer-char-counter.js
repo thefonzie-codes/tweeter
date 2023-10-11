@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  const textArea = $("#tweet-text");
+  const textArea = $("#tweet-str");
 
   textArea.on('focus', function (event) {
     $(this).text("");
