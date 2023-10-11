@@ -7,21 +7,24 @@ main {
 }
 
 .new-tweet {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   width: 100%;
   max-width: 1080px;
+  margin-top: 1em;
+  margin-bottom: 1em;
   align-items: space-between;
 }
 
-#tweet-text {
+textarea {
   display: flex;
   flex-direction: row;
   justify-content: stretch;
+  align-items: center;
   width: 100%;
   position: relative;
   max-width: 1080px;
-  padding: 5px;
+  padding: 6px;
   font-size: medium;
   font-weight: 600;
   color: #545149;
