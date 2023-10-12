@@ -41,6 +41,11 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- img {
-  object-fit: scale-down;
+ .existing-tweets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1080px;
  }
+

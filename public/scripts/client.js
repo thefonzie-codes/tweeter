@@ -8,6 +8,14 @@ const createTweetElement = (newTweetData) => { //Creates the tweet DOM
 
   const timeSince = timeago.format(newTweetData.created_at)
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  const safeHTML = `<p>${escape(newTweetData.content.text)}</p>`;
+
   const layout = `
   <article>
   <section class="tweet-header">
@@ -16,7 +24,7 @@ const createTweetElement = (newTweetData) => { //Creates the tweet DOM
     ${newTweetData.user.name}</h4>
     <h5>${newTweetData.user.handle}</h5>
   </section>
-  <p>${newTweetData.content.text}</p>
+  ${safeHTML}
   <footer>
     ${timeSince}
     <section class="tweet-buttons">
@@ -28,7 +36,7 @@ const createTweetElement = (newTweetData) => { //Creates the tweet DOM
 </article>
 `;
 
-  $('.container').append(layout);
+  $('.existing-tweets').append(layout);
 };
 
 const renderTweets = (allTweets) => { //Adds tweet DOM to container
@@ -46,14 +54,38 @@ $(document).ready(function () {
   };
 
   $("#new-tweet-form").on('submit', (evt) => {
+
     evt.preventDefault();
+
+    const input = $("#tweet-str").val();
     const data = $("#new-tweet-form").serialize();
 
+    if (input.length > 140){
+      $(".too-long").slideDown();
+      evt.stopPropagation();
+    };
+
+    if (input.length <= 0){
+      $(".no-text").slideDown();
+      evt.stopPropagation();
+    };
+
+    if (input.length <= 140 && input.length > 0){
+      $("h3").slideUp();
+      evt.stopPropagation();
+    };
+
     $.post("/tweets", data);
-
-    $('.container').empty();
-
+    $(".existing-tweets").empty();
+    $("#tweet-str").val("What are you humming about?");
     loadTweets();
   });
 
+  $("#new-tweet-form").on("blur", (evt) => {
+    if (!$("#tweet-str").val()){
+      $("#tweet-str").val("What are you humming about?")
+    }
+  })
+
+  loadTweets();
 });

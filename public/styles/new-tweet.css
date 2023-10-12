@@ -37,6 +37,11 @@ textarea {
   border-top: 0;
 }
 
+h3 {
+  color:red;
+  opacity: 80%;
+}
+
 .tweet-submit {
   display: flex;
   flex-direction: row;
@@ -45,6 +50,10 @@ textarea {
   font-family: 'Bungee', sans-serif;
   font-size: medium;
   padding: 5px;
+}
+
+button:hover {
+  box-shadow: 2px 2px #4056A1;
 }
 
 button {
