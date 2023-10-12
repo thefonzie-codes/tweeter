@@ -2,14 +2,6 @@ $(document).ready(function () {
 
   const textArea = $("#tweet-str");
 
-  textArea.on('focus', function (event) {
-    $(this).text("");
-  });
-
-  textArea.on('blur', function (event) {
-    
-  });
-
   textArea.on('input', function (event) {
     const textLength = $(this).val().length;
     const charCounter = $(this).parent().find('.counter');

@@ -42,7 +42,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
-    <section class="write-new">
+    <section class="compose">
       <text>
         <strong>Write</strong> a new tweet
       </text>
@@ -62,9 +62,9 @@
     <section class="new-tweet">
       <form id="new-tweet-form">
         <label for="tweet-text"></label>
-        <h3 hidden class="too-long">Your tweet is too long!  ...You know there's a counter, right?</h3>
-        <h3 hidden class="no-text">Your tweet is blank! I'm sure you have something to hum about.</h3>
-        <textarea name="text" id="tweet-str">What are you humming about?</textarea>
+        <h3 hidden class="too-long">Your tweet is too long!  There's a counter if you need it. 🙌 </h3>
+        <h3 hidden class="no-text">Your tweet is blank! I'm sure you have something to hum about. 💬</h3>
+        <textarea name="text" id="tweet-str" placeholder="What are you humming about?"></textarea>
         <div class="tweet-submit">
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>

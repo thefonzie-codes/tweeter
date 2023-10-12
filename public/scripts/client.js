@@ -40,7 +40,10 @@ const createTweetElement = (newTweetData) => { //Creates the tweet DOM
 };
 
 const renderTweets = (allTweets) => { //Adds tweet DOM to container
-  allTweets.forEach((element) => {
+
+  const tweetsReverseChronological = allTweets.reverse();
+
+  tweetsReverseChronological.forEach((element) => {
     createTweetElement(element);
   });
 };
@@ -48,7 +51,7 @@ const renderTweets = (allTweets) => { //Adds tweet DOM to container
 $(document).ready(function () {
 
   const loadTweets = () => {
-    $.get("http://localhost:8080/tweets", (data) => {
+    $.get("/tweets", (data) => {
       renderTweets(data);
     });
   };
@@ -70,22 +73,16 @@ $(document).ready(function () {
       evt.stopPropagation();
     };
 
-    if (input.length <= 140 && input.length > 0){
-      $("h3").slideUp();
-      evt.stopPropagation();
-    };
-
     $.post("/tweets", data);
     $(".existing-tweets").empty();
-    $("#tweet-str").val("What are you humming about?");
+    $("#tweet-str").val("");
     loadTweets();
   });
 
-  $("#new-tweet-form").on("blur", (evt) => {
-    if (!$("#tweet-str").val()){
-      $("#tweet-str").val("What are you humming about?")
-    }
-  })
+  $("#new-tweet-form").on('click', (evt) => {
+    $("h3").slideUp();
+    evt.stopPropagation();
+  });
 
   loadTweets();
 });

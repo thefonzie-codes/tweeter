@@ -38,20 +38,22 @@ h5 {
 
 p {
   display: flex;
-  flex-direction: row;
-  width: 98%;
+  flex-flow: wrap row;
+  align-self: center;
+  width: 96%;
   padding: .5em;
   font-size: medium;
   font-weight: 600;
   color: #545149;
   background-color: #f4f1ec;
   border-bottom: 2px solid #545149;
-  height: 30%;
-  max-height: 50%;
+  height: auto;
+  max-height: 60%;
   border-left: 0;
   border-right: 0;
   border-top: 0;
   margin: .2em;
+  overflow: auto;
 }
 
 footer {
@@ -61,13 +63,14 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: .75em;
+  padding-left: .9em;
 }
 
 .tweet-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 i:hover {

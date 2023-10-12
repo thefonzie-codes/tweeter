@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -26,8 +29,8 @@ body {
 
 main {
   display: flex;
-  width: 90vh;
-  max-width: 100;
+  width: 90%;
+  max-width: 100%;
   background-color: #f4f1ec;
   font-size: medium;
   font-family: 'Source Sans 3', sans-serif;
@@ -41,20 +44,36 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .existing-tweets {
+.existing-tweets {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1080px;
- }
-
- img {
-  margin-right: .5em;
-  object-fit: contain; 
 }
 
- /* Tablet only design */
+img {
+  margin-right: .5em;
+  object-fit: contain;
+}
 
+/* Desktop only design 1024px+ */
 
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10em;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: medium;
+    font-family: 'Source Sans 3', sans-serif;
+    align-items: flex-start;
+  }
+
+  main {
+    width: 50%;
+  }
+}
 

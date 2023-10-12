@@ -19,3 +19,26 @@ header {
 h2 {
   margin-block: .6em;
 }
+
+/*Desktop-only styling*/
+
+@media only screen and (min-width: 1024px) {
+
+  header {
+    height: 40%;
+    width: 40%;
+    padding: 3em;
+    position: sticky;
+    top: 10em;
+  }
+
+  .user-avatar {
+    height: 15em;
+  }
+  
+  h2 {
+    margin-block: 1em;
+    font-size: xx-large;
+  }
+
+}

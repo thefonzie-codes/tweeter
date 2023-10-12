@@ -18,27 +18,47 @@ span {
   font-size: large;
 }
 
-.write-new {
+.compose {
   display: flex;
   font-family: 'Source Sans 3', sans-serif;
   margin: 1em;
-  font-size: x-small;
+  margin-right: 1.25em;
+  font-size: small;
   flex-direction: column;
   align-items: center;
 }
 
+@media only screen and (min-width: 1024px) {
 
-/* nav {
-  display: flex;
-  position: fixed;
-  top: 0px;
-  height: 100vh;
-  max-height: 120px;
-  width: 100%;
-  font-family: 'Bungee', sans-serif;
-  background-color: #4056A1;
-  color: #FFFFFF;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0px 0px 10px #000; 
-} */
+  nav {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    height: 10em;
+    width: 100%;
+    background-image: none;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 10px #000;
+  }
+
+  span {
+    margin: 1em;
+    display: flex;
+    font-size: xx-large;
+  }
+
+  .compose {
+    display: flex;
+    font-family: 'Source Sans 3', sans-serif;
+    margin: 1em;
+    margin-right: 3em;
+    font-size: medium;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
