@@ -16,11 +16,11 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
   color: #545149;
   background-color: #f4f1ec;
   font-size: medium;
   font-family: 'Source Sans 3', sans-serif;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -48,4 +48,13 @@ main {
   width: 100%;
   max-width: 1080px;
  }
+
+ img {
+  margin-right: .5em;
+  object-fit: contain; 
+}
+
+ /* Tablet only design */
+
+
 

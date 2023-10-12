@@ -27,7 +27,8 @@ h5 {
 
 .tweet-header {
   display: flex;
-  padding: 1em;
+  padding: .5em;
+  padding-left: .3em;
   flex-flow: wrap row;
   font-family: 'Source Sans 3', sans-serif;
   font-size: medium;
@@ -76,10 +77,4 @@ i:hover {
 i {
   margin: .5em;
   color: #4056A1;
-}
-
-
-img {
-  margin-right: 10px;
-  object-fit: scale-down;
 }

@@ -24,7 +24,7 @@ textarea {
   width: 100%;
   position: relative;
   max-width: 1080px;
-  padding: 6px;
+  padding: .5em;
   font-size: medium;
   font-weight: 600;
   color: #545149;
