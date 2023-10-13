@@ -73,8 +73,13 @@ footer {
   justify-content: space-evenly;
 }
 
-.fa-flag:hover, .fa-heart:hover, .fa-retweet:hover {
+.fa-flag:hover,
+.fa-retweet:hover {
   color: #c29f55;
+}
+
+.fa-heart:hover {
+  color: red;
 }
 
 i {

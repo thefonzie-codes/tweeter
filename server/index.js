@@ -33,8 +33,8 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 app.use("/tweets", tweetsRoutes);
 
 app.post("/tweets/",(req, res) => {
-  res.redirect("/")
-})
+  res.redirect("/");
+});
 
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

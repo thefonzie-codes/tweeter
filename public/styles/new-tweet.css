@@ -36,6 +36,7 @@ textarea {
 h3 {
   color:red;
   opacity: 80%;
+  font-size: small;
 }
 
 .tweet-submit {
@@ -59,4 +60,12 @@ button {
   border: 0;
   color: #FFFFFF;
   font-size: medium;
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  h3 {
+  font-size: medium;
+  }
+  
 }

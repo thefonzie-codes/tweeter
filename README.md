@@ -16,3 +16,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- md5
+- timeago.js
+
+## Notes
+
+- Stretch features are implemented: the return back to top of page button and the toggling of the tweet composer area, however "Write a new tweet" is not hidden when composer area is in view.
+- Added additional animations (mostly for desktop as there is no hover on mobile) for the "Write a new tweet" and return to top of page buttons as well on hover.
+- Only used 2
+
+## Screenshots

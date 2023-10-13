@@ -4,16 +4,16 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   const createTweetElement = (newTweetData) => { //Creates the tweet DOM
 
-    const timeSince = timeago.format(newTweetData.created_at)
+    const timeSince = timeago.format(newTweetData.created_at);
   
     //ensures that site is safe from XSS attacks
     //@param str is an input string which will be the new tweet data's content
   
-    const escape = function (str) {  
+    const escape = function(str) {
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
@@ -47,7 +47,7 @@ $(document).ready(function () {
   // adds tweet DOM to container
   // @param (allTweets) should be an array of tweet data
   
-  const renderTweets = (allTweets) => { 
+  const renderTweets = (allTweets) => {
   
     const tweetsReverseChronological = allTweets.reverse();
   
@@ -73,19 +73,20 @@ $(document).ready(function () {
 
     // the code below will automatically display errors in red if tweet is 0 charachters or over 140.
 
-    if (input.length > 140){
+    if (input.length > 140) {
       $(".too-long").slideDown();
-      evt.stopPropagation();
-    };
+      return false;
+    }
 
-    if (input.length <= 0){
+    if (input.length <= 0) {
       $(".no-text").slideDown();
-      evt.stopPropagation();
-    };
+      return false;
+    }
 
     $.post("/tweets", data);
     $(".existing-tweets").empty();
     $("#tweet-str").val("");
+    $("#tweet-str").parent().find('.counter').val(140)
     loadTweets();
   });
 
@@ -93,7 +94,6 @@ $(document).ready(function () {
 
   $("#new-tweet-form").on('click', (evt) => {
     $("h3").slideUp();
-    evt.stopPropagation();
   });
 
   // loads existing tweets upon site load

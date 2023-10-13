@@ -20,6 +20,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  margin-top: 4em;
   color: #545149;
   background-color: #f4f1ec;
   font-size: medium;
