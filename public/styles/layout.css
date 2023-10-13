@@ -57,8 +57,29 @@ img {
   object-fit: contain;
 }
 
-textarea:focus, input:focus{
+textarea:focus,
+input:focus {
   outline: none;
+}
+
+.fa-angles-up {
+  color: white;
+}
+
+.fa-angles-up:hover {
+  color: white;
+}
+
+.scroll-up {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 100%;
+}
+
+.scroll-up:hover {
+  box-shadow: none;
+  color: white;
 }
 
 /* Desktop only design 1024px+ */
@@ -79,5 +100,5 @@ textarea:focus, input:focus{
   main {
     width: 50%;
   }
-}
 
+}
