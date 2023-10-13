@@ -27,3 +27,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Only used 2
 
 ## Screenshots
+
+![Screenshot of Tweeter on desktop](https://github.com/thefonzie-codes/tweeter/blob/master/docs/tweeter_desktop.png?raw=true)
+![Screenshot of Tweeter on mobile - iPhoneSE](https://github.com/thefonzie-codes/tweeter/blob/master/docs/tweeter_desktop.png?raw=true)
