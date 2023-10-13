@@ -57,6 +57,10 @@ img {
   object-fit: contain;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 /* Desktop only design 1024px+ */
 
 @media only screen and (min-width: 1024px) {

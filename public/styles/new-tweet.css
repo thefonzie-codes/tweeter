@@ -50,6 +50,7 @@ h3 {
 
 button:hover {
   box-shadow: 2px 2px #4056A1;
+  cursor: pointer;
 }
 
 button {
